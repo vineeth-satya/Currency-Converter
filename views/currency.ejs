@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Currency Converter</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.container {
+  /* background: #fff; */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+  text-align: center;
+  margin-left: 50%;
+}
+
+.heading {
+  margin-bottom: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.converter {
+  margin-top: 20px;
+  margin-right: 10px
+}
+
+.amount {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+}
+
+.conversion {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.from, .to {
+  flex: 1;
+  padding: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.exchange-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.exchange-btn:hover {
+  background: #45a049;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">Currency Converter</h1>
+     <form method="post" action="/">
+    <div class="converter">
+      <input type="number" name="amount" class="amount" placeholder="Enter amount">
+      <div class="conversion">
+        <div class="from">
+          <label>From</label>
+          <select name="fromCurrency">
+            <option value="USD">USD</option>
+            <option value="PKR">PKR</option>
+            <option value="INR">INR</option>
+          </select>
+        </div>
+        <div class="to">
+          <label>To</label>
+          <select name="toCurrency">
+            <option value="INR">INR</option>
+            <option value="USD">USD</option>
+            <option value="PKR">PKR</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="exchange-btn">Exchange</button>
+    </div>
+    
+    <h1><%=amount%> <%=country1%> = <%=final%> <%=country2%></h1>
+  </div>
+      </form>
+    
+</body>
+</html>
